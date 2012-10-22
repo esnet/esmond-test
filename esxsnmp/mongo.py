@@ -68,6 +68,8 @@ class MONGO_DB(object):
                 raise ConnectionException("Could not authenticate to "
                                           "database as user '%s'" % (config.mongo_user))
                                           
+        serverVersion = tuple(self.connection.server_info()['version'].split('.'))
+                                          
         if clear_on_test and os.environ.get("ESXSNMP_TESTING", False):
             self.connection.drop_database(self.database)
             
@@ -81,6 +83,15 @@ class MONGO_DB(object):
         self.metadata.ensure_index(self.meta_idx, unique=True)
         self.rates.ensure_index(self.rate_idx, unique=True)
         self.aggs.ensure_index(self.agg_idx, unique=True)
+        
+        if config.mongo_raw_expire:
+            requiredVersion = tuple("2.2.0".split("."))
+            if serverVersion >= requiredVersion:
+                self.raw_data.ensure_index([('ts', ASCENDING)], 
+                                            expireAfterSeconds=config.mongo_raw_expire)
+            else:
+                # XXX(mmg): log this
+                pass
         
         # Timing
         self.stats = DatabaseMetrics()
