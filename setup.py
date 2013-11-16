@@ -8,9 +8,10 @@ setup(name='esmond',
         author='Jon M. Dugan',
         author_email='jdugan@es.net',
         url='http://code.google.com/p/esmond/',
-        packages=['esmond', 'esmond.api', 'esmond.admin'],
+        packages=['esmond', 'esmond.api', 'esmond.api.client', 'esmond.admin'],
         install_requires=['tsdb', 'Django==1.5.1', 'django-tastypie', 'web.py',
-            'python-memcached', 'pycassa', 'psycopg2','python-mimeparse'],
+            'python-memcached', 'pycassa', 'psycopg2','python-mimeparse',
+            'requests', 'mock'],
         entry_points = {
             'console_scripts': [
                 'espolld = esmond.poll:espolld',
