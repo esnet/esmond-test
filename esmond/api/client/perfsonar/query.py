@@ -291,7 +291,7 @@ class DataHistogram(NodeInfo):
     def __init__(self, data={}):
         super(DataHistogram, self).__init__(data, None, None)
         self.ts = self._convert_to_datetime(data.get('ts', None))
-        self.val = json.loads(data.get('val', u'{}'))
+        self.val = data.get('val', {})
 
     @property
     def ts_epoch(self):
