@@ -11,13 +11,13 @@ sbs: ['localtoc.html']
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>api Reference &mdash; esmond 0.9.1a1 documentation</title>
+    <title>Developer Reference &mdash; esmond 0.9.1a1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/esnet.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -36,7 +36,7 @@ sbs: ['localtoc.html']
     <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="esmond 0.9.1a1 documentation" href="index.html" />
-    <link rel="next" title="client Package" href="api.client.html" />
+    <link rel="next" title="REST API Client Libary" href="api.client.html" />
     <link rel="prev" title="Hacking on esmond" href="hacking.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -46,7 +46,7 @@ sbs: ['localtoc.html']
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar esnet-blue navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -57,7 +57,6 @@ sbs: ['localtoc.html']
         </button>
         <a class="navbar-brand" href="index.html"><img src="_static/logo-esnet-ball-sm.png">
           esmond</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.9.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -80,8 +79,9 @@ sbs: ['localtoc.html']
 <li class="toctree-l1"><a class="reference internal" href="deployment_cookbook.html">Deployment Cookbook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">esmond subsystems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking on esmond</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">api Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.client.html">client Package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.client.html">REST API Client Libary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example/index.html">Examples</a></li>
 </ul>
 </ul>
 </li>
@@ -95,7 +95,7 @@ sbs: ['localtoc.html']
     </a>
   </li>
   <li>
-    <a href="api.client.html" title="Next Chapter: client Package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">client Package &raquo;</span>
+    <a href="api.client.html" title="Next Chapter: REST API Client Libary"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">REST API Client ... &raquo;</span>
     </a>
   </li>
               
@@ -123,7 +123,7 @@ sbs: ['localtoc.html']
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">api Reference</a><ul>
+<li><a class="reference internal" href="#">Developer Reference</a><ul>
 <li><a class="reference internal" href="#module-api.api"><tt class="docutils literal"><span class="pre">api</span></tt> Module</a></li>
 <li><a class="reference internal" href="#module-api.models"><tt class="docutils literal"><span class="pre">models</span></tt> Module</a></li>
 <li><a class="reference internal" href="#module-api.views"><tt class="docutils literal"><span class="pre">views</span></tt> Module</a></li>
@@ -136,8 +136,8 @@ sbs: ['localtoc.html']
       </div>
     <div class="col-md-9">
       
-  <div class="section" id="api-reference">
-<h1>api Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="developer-reference">
+<h1>Developer Reference<a class="headerlink" href="#developer-reference" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-api.api">
 <span id="api-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">api</span></tt> Module<a class="headerlink" href="#module-api.api" title="Permalink to this headline">¶</a></h2>
 <p>REST namespace documentation:</p>
@@ -269,14 +269,14 @@ the cassandra row keys.</p>
 
 <dl class="attribute">
 <dt id="api.api.BulkDispatch.Meta.serializer">
-<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x110e43410&gt;</em><a class="headerlink" href="#api.api.BulkDispatch.Meta.serializer" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x10d430b90&gt;</em><a class="headerlink" href="#api.api.BulkDispatch.Meta.serializer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.BulkDispatch.base_fields">
-<tt class="descclassname">BulkDispatch.</tt><tt class="descname">base_fields</tt><em class="property"> = {'resource_uri': &lt;tastypie.fields.CharField object at 0x110e43550&gt;}</em><a class="headerlink" href="#api.api.BulkDispatch.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">BulkDispatch.</tt><tt class="descname">base_fields</tt><em class="property"> = {'resource_uri': &lt;tastypie.fields.CharField object at 0x10d430cd0&gt;}</em><a class="headerlink" href="#api.api.BulkDispatch.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -336,7 +336,7 @@ information to the appropriate InterfaceResource.</p>
 
 <dl class="attribute">
 <dt id="api.api.DeviceResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e3ad50&gt;</em><a class="headerlink" href="#api.api.DeviceResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d42a710&gt;</em><a class="headerlink" href="#api.api.DeviceResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -382,12 +382,12 @@ on, as that&#8217;s all the more granular Django&#8217;s permission setup gets.<
 
 <dl class="attribute">
 <dt id="api.api.DeviceResource.Meta.serializer">
-<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x110e3acd0&gt;</em><a class="headerlink" href="#api.api.DeviceResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x10d42a650&gt;</em><a class="headerlink" href="#api.api.DeviceResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.DeviceResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e3ad10&gt;</em><a class="headerlink" href="#api.api.DeviceResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d42a590&gt;</em><a class="headerlink" href="#api.api.DeviceResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -399,7 +399,7 @@ on, as that&#8217;s all the more granular Django&#8217;s permission setup gets.<
 
 <dl class="attribute">
 <dt id="api.api.DeviceResource.base_fields">
-<tt class="descclassname">DeviceResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'leaf': &lt;tastypie.fields.BooleanField object at 0x110e3ac90&gt;, 'name': &lt;tastypie.fields.CharField object at 0x110e400d0&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x110e40090&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x110e40150&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x110e40110&gt;, 'active': &lt;tastypie.fields.BooleanField object at 0x110e40190&gt;, 'oidsets': &lt;tastypie.fields.ToManyField object at 0x110e3af90&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e3abd0&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e40050&gt;}</em><a class="headerlink" href="#api.api.DeviceResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">DeviceResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'leaf': &lt;tastypie.fields.BooleanField object at 0x10d42a390&gt;, 'name': &lt;tastypie.fields.CharField object at 0x10d42a410&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x10d42a610&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x10d42a350&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x10d42a510&gt;, 'active': &lt;tastypie.fields.BooleanField object at 0x10d42a850&gt;, 'oidsets': &lt;tastypie.fields.ToManyField object at 0x10d42a790&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d42a2d0&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d42a450&gt;}</em><a class="headerlink" href="#api.api.DeviceResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -409,7 +409,7 @@ on, as that&#8217;s all the more granular Django&#8217;s permission setup gets.<
 
 <dl class="attribute">
 <dt id="api.api.DeviceResource.declared_fields">
-<tt class="descclassname">DeviceResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'oidsets': &lt;tastypie.fields.ToManyField object at 0x110e3af90&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x110e3ac90&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e3abd0&gt;}</em><a class="headerlink" href="#api.api.DeviceResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">DeviceResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'oidsets': &lt;tastypie.fields.ToManyField object at 0x10d42a790&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x10d42a390&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d42a2d0&gt;}</em><a class="headerlink" href="#api.api.DeviceResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -529,7 +529,7 @@ other usual args (begin/end/cf...)</dd>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceBulkRequestResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousBulkLimitElseApiAuthentication object at 0x110e43650&gt;</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousBulkLimitElseApiAuthentication object at 0x10d430dd0&gt;</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -545,12 +545,12 @@ other usual args (begin/end/cf...)</dd>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceBulkRequestResource.Meta.serializer">
-<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x110e43510&gt;</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x10d430c90&gt;</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceBulkRequestResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e43690&gt;</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d430e10&gt;</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -562,7 +562,7 @@ other usual args (begin/end/cf...)</dd>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceBulkRequestResource.base_fields">
-<tt class="descclassname">InterfaceBulkRequestResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'resource_uri': &lt;tastypie.fields.CharField object at 0x110e43790&gt;}</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">InterfaceBulkRequestResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'resource_uri': &lt;tastypie.fields.CharField object at 0x10d430f10&gt;}</em><a class="headerlink" href="#api.api.InterfaceBulkRequestResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -606,7 +606,7 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceDataResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e432d0&gt;</em><a class="headerlink" href="#api.api.InterfaceDataResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d430a50&gt;</em><a class="headerlink" href="#api.api.InterfaceDataResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -622,19 +622,19 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceDataResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e43310&gt;</em><a class="headerlink" href="#api.api.InterfaceDataResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d430a90&gt;</em><a class="headerlink" href="#api.api.InterfaceDataResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceDataResource.base_fields">
-<tt class="descclassname">InterfaceDataResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'end_time': &lt;tastypie.fields.IntegerField object at 0x110e431d0&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x110e43150&gt;, 'agg': &lt;tastypie.fields.CharField object at 0x110e43250&gt;, 'data': &lt;tastypie.fields.ListField object at 0x110e43210&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x110e43290&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e43450&gt;}</em><a class="headerlink" href="#api.api.InterfaceDataResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">InterfaceDataResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'end_time': &lt;tastypie.fields.IntegerField object at 0x10d430950&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x10d4308d0&gt;, 'agg': &lt;tastypie.fields.CharField object at 0x10d4309d0&gt;, 'data': &lt;tastypie.fields.ListField object at 0x10d430990&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x10d430a10&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d430bd0&gt;}</em><a class="headerlink" href="#api.api.InterfaceDataResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceDataResource.declared_fields">
-<tt class="descclassname">InterfaceDataResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'agg': &lt;tastypie.fields.CharField object at 0x110e43250&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x110e43150&gt;, 'data': &lt;tastypie.fields.ListField object at 0x110e43210&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x110e43290&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x110e431d0&gt;}</em><a class="headerlink" href="#api.api.InterfaceDataResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">InterfaceDataResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'agg': &lt;tastypie.fields.CharField object at 0x10d4309d0&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x10d4308d0&gt;, 'data': &lt;tastypie.fields.ListField object at 0x10d430990&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x10d430a10&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x10d430950&gt;}</em><a class="headerlink" href="#api.api.InterfaceDataResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -682,7 +682,7 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e3aed0&gt;</em><a class="headerlink" href="#api.api.InterfaceResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d430310&gt;</em><a class="headerlink" href="#api.api.InterfaceResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -713,7 +713,7 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e3add0&gt;</em><a class="headerlink" href="#api.api.InterfaceResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d430350&gt;</em><a class="headerlink" href="#api.api.InterfaceResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -727,7 +727,7 @@ and serialized as json.</p>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceResource.base_fields">
-<tt class="descclassname">InterfaceResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'ifType': &lt;tastypie.fields.IntegerField object at 0x110e40f50&gt;, 'ifDescr': &lt;tastypie.fields.CharField object at 0x110e40dd0&gt;, 'ipAddr': &lt;tastypie.fields.CharField object at 0x110e40e50&gt;, 'ifPhysAddress': &lt;tastypie.fields.CharField object at 0x110e430d0&gt;, 'ifIndex': &lt;tastypie.fields.IntegerField object at 0x110e40d90&gt;, 'ifAdminStatus': &lt;tastypie.fields.IntegerField object at 0x110e40fd0&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x110e43050&gt;, 'device': &lt;tastypie.fields.ToOneField object at 0x110e40810&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e40990&gt;, 'ifMtu': &lt;tastypie.fields.IntegerField object at 0x110e40f10&gt;, 'ifSpeed': &lt;tastypie.fields.CharField object at 0x110e40e90&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x110e409d0&gt;, 'ifHighSpeed': &lt;tastypie.fields.CharField object at 0x110e40ed0&gt;, 'ifAlias': &lt;tastypie.fields.CharField object at 0x110e40e10&gt;, 'uri': &lt;tastypie.fields.CharField object at 0x110e40a50&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x110e40d50&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x110e43090&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x110e40a10&gt;, 'ifOperStatus': &lt;tastypie.fields.IntegerField object at 0x110e40f90&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e40c50&gt;}</em><a class="headerlink" href="#api.api.InterfaceResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">InterfaceResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'ifType': &lt;tastypie.fields.IntegerField object at 0x10d430710&gt;, 'ifDescr': &lt;tastypie.fields.CharField object at 0x10d430590&gt;, 'ipAddr': &lt;tastypie.fields.CharField object at 0x10d430610&gt;, 'ifPhysAddress': &lt;tastypie.fields.CharField object at 0x10d430850&gt;, 'ifIndex': &lt;tastypie.fields.IntegerField object at 0x10d430550&gt;, 'ifAdminStatus': &lt;tastypie.fields.IntegerField object at 0x10d430790&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x10d4307d0&gt;, 'device': &lt;tastypie.fields.ToOneField object at 0x10d42aed0&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d430090&gt;, 'ifMtu': &lt;tastypie.fields.IntegerField object at 0x10d4306d0&gt;, 'ifSpeed': &lt;tastypie.fields.CharField object at 0x10d430650&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x10d4300d0&gt;, 'ifHighSpeed': &lt;tastypie.fields.CharField object at 0x10d430690&gt;, 'ifAlias': &lt;tastypie.fields.CharField object at 0x10d4305d0&gt;, 'uri': &lt;tastypie.fields.CharField object at 0x10d430150&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x10d430510&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x10d430810&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x10d430110&gt;, 'ifOperStatus': &lt;tastypie.fields.IntegerField object at 0x10d430750&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d430410&gt;}</em><a class="headerlink" href="#api.api.InterfaceResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -737,7 +737,7 @@ and serialized as json.</p>
 
 <dl class="attribute">
 <dt id="api.api.InterfaceResource.declared_fields">
-<tt class="descclassname">InterfaceResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'device': &lt;tastypie.fields.ToOneField object at 0x110e40810&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x110e40a10&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x110e409d0&gt;, 'uri': &lt;tastypie.fields.CharField object at 0x110e40a50&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e40990&gt;}</em><a class="headerlink" href="#api.api.InterfaceResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">InterfaceResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'device': &lt;tastypie.fields.ToOneField object at 0x10d42aed0&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x10d430110&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x10d4300d0&gt;, 'uri': &lt;tastypie.fields.CharField object at 0x10d430150&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d430090&gt;}</em><a class="headerlink" href="#api.api.InterfaceResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -807,7 +807,7 @@ their original state.</p>
 
 <dl class="attribute">
 <dt id="api.api.OidResource.base_fields">
-<tt class="descclassname">OidResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'aggregate': &lt;tastypie.fields.BooleanField object at 0x110e40910&gt;, 'endpoint_alias': &lt;tastypie.fields.CharField object at 0x110e40950&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x110e40890&gt;, 'name': &lt;tastypie.fields.CharField object at 0x110e408d0&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e40850&gt;}</em><a class="headerlink" href="#api.api.OidResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OidResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'aggregate': &lt;tastypie.fields.BooleanField object at 0x10d42afd0&gt;, 'endpoint_alias': &lt;tastypie.fields.CharField object at 0x10d430050&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x10d42af50&gt;, 'name': &lt;tastypie.fields.CharField object at 0x10d42af90&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d42af10&gt;}</em><a class="headerlink" href="#api.api.OidResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -846,7 +846,7 @@ their original state.</p>
 
 <dl class="attribute">
 <dt id="api.api.OidsetEndpointResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e40590&gt;</em><a class="headerlink" href="#api.api.OidsetEndpointResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d42ac50&gt;</em><a class="headerlink" href="#api.api.OidsetEndpointResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -884,12 +884,12 @@ their original state.</p>
 
 <dl class="attribute">
 <dt id="api.api.OidsetEndpointResource.base_fields">
-<tt class="descclassname">OidsetEndpointResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'oids': &lt;tastypie.fields.ToManyField object at 0x110e40350&gt;, 'name': &lt;tastypie.fields.CharField object at 0x110e40610&gt;}</em><a class="headerlink" href="#api.api.OidsetEndpointResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OidsetEndpointResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'oids': &lt;tastypie.fields.ToManyField object at 0x10d42aa10&gt;, 'name': &lt;tastypie.fields.CharField object at 0x10d42acd0&gt;}</em><a class="headerlink" href="#api.api.OidsetEndpointResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.OidsetEndpointResource.declared_fields">
-<tt class="descclassname">OidsetEndpointResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'oids': &lt;tastypie.fields.ToManyField object at 0x110e40350&gt;}</em><a class="headerlink" href="#api.api.OidsetEndpointResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OidsetEndpointResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'oids': &lt;tastypie.fields.ToManyField object at 0x10d42aa10&gt;}</em><a class="headerlink" href="#api.api.OidsetEndpointResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -928,7 +928,7 @@ their original state.</p>
 
 <dl class="attribute">
 <dt id="api.api.OidsetResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e402d0&gt;</em><a class="headerlink" href="#api.api.OidsetResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d42a990&gt;</em><a class="headerlink" href="#api.api.OidsetResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -961,7 +961,7 @@ their original state.</p>
 
 <dl class="attribute">
 <dt id="api.api.OidsetResource.base_fields">
-<tt class="descclassname">OidsetResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'name': &lt;tastypie.fields.CharField object at 0x110e403d0&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e40390&gt;}</em><a class="headerlink" href="#api.api.OidsetResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OidsetResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'name': &lt;tastypie.fields.CharField object at 0x10d42aa90&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d42aa50&gt;}</em><a class="headerlink" href="#api.api.OidsetResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1010,7 +1010,7 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.OutletDataResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e46e10&gt;</em><a class="headerlink" href="#api.api.OutletDataResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d436510&gt;</em><a class="headerlink" href="#api.api.OutletDataResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1026,19 +1026,19 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.OutletDataResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e46e50&gt;</em><a class="headerlink" href="#api.api.OutletDataResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d436550&gt;</em><a class="headerlink" href="#api.api.OutletDataResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.OutletDataResource.base_fields">
-<tt class="descclassname">OutletDataResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'begin_time': &lt;tastypie.fields.IntegerField object at 0x110e46ad0&gt;, 'data': &lt;tastypie.fields.ListField object at 0x110e46dd0&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x110e46d90&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e46f90&gt;}</em><a class="headerlink" href="#api.api.OutletDataResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OutletDataResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'begin_time': &lt;tastypie.fields.IntegerField object at 0x10d4361d0&gt;, 'data': &lt;tastypie.fields.ListField object at 0x10d4364d0&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x10d436490&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d436690&gt;}</em><a class="headerlink" href="#api.api.OutletDataResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.OutletDataResource.declared_fields">
-<tt class="descclassname">OutletDataResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'data': &lt;tastypie.fields.ListField object at 0x110e46dd0&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x110e46d90&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x110e46ad0&gt;}</em><a class="headerlink" href="#api.api.OutletDataResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OutletDataResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'data': &lt;tastypie.fields.ListField object at 0x10d4364d0&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x10d436490&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x10d4361d0&gt;}</em><a class="headerlink" href="#api.api.OutletDataResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1075,7 +1075,7 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.OutletResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e46a10&gt;</em><a class="headerlink" href="#api.api.OutletResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d436110&gt;</em><a class="headerlink" href="#api.api.OutletResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1106,7 +1106,7 @@ into the normal namespace for the API.</p>
 
 <dl class="attribute">
 <dt id="api.api.OutletResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e46a50&gt;</em><a class="headerlink" href="#api.api.OutletResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d436150&gt;</em><a class="headerlink" href="#api.api.OutletResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1120,7 +1120,7 @@ and serialized as json.</p>
 
 <dl class="attribute">
 <dt id="api.api.OutletResource.base_fields">
-<tt class="descclassname">OutletResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'leaf': &lt;tastypie.fields.BooleanField object at 0x110e46710&gt;, 'outletStatus': &lt;tastypie.fields.IntegerField object at 0x110e46c50&gt;, 'pdu': &lt;tastypie.fields.ToOneField object at 0x110e43f50&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x110e46cd0&gt;, 'outletName': &lt;tastypie.fields.CharField object at 0x110e46c10&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x110e46b90&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x110e46d10&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x110e468d0&gt;, 'outletControlState': &lt;tastypie.fields.IntegerField object at 0x110e46c90&gt;, 'outletID': &lt;tastypie.fields.CharField object at 0x110e46bd0&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e46750&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e46b10&gt;}</em><a class="headerlink" href="#api.api.OutletResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OutletResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'leaf': &lt;tastypie.fields.BooleanField object at 0x10d432dd0&gt;, 'outletStatus': &lt;tastypie.fields.IntegerField object at 0x10d436350&gt;, 'pdu': &lt;tastypie.fields.ToOneField object at 0x10d42a550&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x10d4363d0&gt;, 'outletName': &lt;tastypie.fields.CharField object at 0x10d436310&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x10d436290&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x10d436410&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x10d432f90&gt;, 'outletControlState': &lt;tastypie.fields.IntegerField object at 0x10d436390&gt;, 'outletID': &lt;tastypie.fields.CharField object at 0x10d4362d0&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d432e10&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d436210&gt;}</em><a class="headerlink" href="#api.api.OutletResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1130,7 +1130,7 @@ and serialized as json.</p>
 
 <dl class="attribute">
 <dt id="api.api.OutletResource.declared_fields">
-<tt class="descclassname">OutletResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'pdu': &lt;tastypie.fields.ToOneField object at 0x110e43f50&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x110e46710&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e46750&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x110e468d0&gt;}</em><a class="headerlink" href="#api.api.OutletResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">OutletResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'pdu': &lt;tastypie.fields.ToOneField object at 0x10d42a550&gt;, 'leaf': &lt;tastypie.fields.BooleanField object at 0x10d432dd0&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d432e10&gt;, 'device_uri': &lt;tastypie.fields.CharField object at 0x10d432f90&gt;}</em><a class="headerlink" href="#api.api.OutletResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1201,14 +1201,14 @@ and serialized as json.</p>
 
 <dl class="attribute">
 <dt id="api.api.PDUResource.Meta.serializer">
-<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x110e43fd0&gt;</em><a class="headerlink" href="#api.api.PDUResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x10d42a5d0&gt;</em><a class="headerlink" href="#api.api.PDUResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.PDUResource.base_fields">
-<tt class="descclassname">PDUResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'leaf': &lt;tastypie.fields.BooleanField object at 0x110e43f90&gt;, 'name': &lt;tastypie.fields.CharField object at 0x110e46190&gt;, 'children': &lt;tastypie.fields.ListField object at 0x110e467d0&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x110e460d0&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x110e46610&gt;, 'active': &lt;tastypie.fields.BooleanField object at 0x110e46150&gt;, 'oidsets': &lt;tastypie.fields.ToManyField object at 0x110e46550&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x110e46050&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e466d0&gt;}</em><a class="headerlink" href="#api.api.PDUResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">PDUResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'leaf': &lt;tastypie.fields.BooleanField object at 0x10d432850&gt;, 'name': &lt;tastypie.fields.CharField object at 0x10d432710&gt;, 'children': &lt;tastypie.fields.ListField object at 0x10d432e90&gt;, 'end_time': &lt;tastypie.fields.DateTimeField object at 0x10d432cd0&gt;, 'begin_time': &lt;tastypie.fields.DateTimeField object at 0x10d432c90&gt;, 'active': &lt;tastypie.fields.BooleanField object at 0x10d432810&gt;, 'oidsets': &lt;tastypie.fields.ToManyField object at 0x10d432c10&gt;, u'id': &lt;tastypie.fields.IntegerField object at 0x10d432790&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d432d90&gt;}</em><a class="headerlink" href="#api.api.PDUResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1290,7 +1290,7 @@ lots of args to GET requests.  Incoming payload looks like this:</p>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesBulkRequestResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousTimeseriesBulkLimitElseApiAuthentication object at 0x110e43bd0&gt;</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousTimeseriesBulkLimitElseApiAuthentication object at 0x10d432390&gt;</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1306,12 +1306,12 @@ lots of args to GET requests.  Incoming payload looks like this:</p>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesBulkRequestResource.Meta.serializer">
-<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x110e43ad0&gt;</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x10d432290&gt;</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesBulkRequestResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e43c10&gt;</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d4323d0&gt;</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1323,7 +1323,7 @@ lots of args to GET requests.  Incoming payload looks like this:</p>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesBulkRequestResource.base_fields">
-<tt class="descclassname">TimeseriesBulkRequestResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'resource_uri': &lt;tastypie.fields.CharField object at 0x110e43d10&gt;}</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">TimeseriesBulkRequestResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'resource_uri': &lt;tastypie.fields.CharField object at 0x10d4324d0&gt;}</em><a class="headerlink" href="#api.api.TimeseriesBulkRequestResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1376,7 +1376,7 @@ key.</p>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesResource.Meta.authentication">
-<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x110e43990&gt;</em><a class="headerlink" href="#api.api.TimeseriesResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">authentication</tt><em class="property"> = &lt;esmond.api.auth.AnonymousGetElseApiAuthentication object at 0x10d432150&gt;</em><a class="headerlink" href="#api.api.TimeseriesResource.Meta.authentication" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1401,12 +1401,12 @@ resources don&#8217;t map directly (or at all) to Django models we can&#8217;t u
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesResource.Meta.serializer">
-<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x110e43910&gt;</em><a class="headerlink" href="#api.api.TimeseriesResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">serializer</tt><em class="property"> = &lt;api.api.DeviceSerializer object at 0x10d4320d0&gt;</em><a class="headerlink" href="#api.api.TimeseriesResource.Meta.serializer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesResource.Meta.throttle">
-<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x110e43a10&gt;</em><a class="headerlink" href="#api.api.TimeseriesResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">throttle</tt><em class="property"> = &lt;esmond.api.auth.AnonymousThrottle object at 0x10d4321d0&gt;</em><a class="headerlink" href="#api.api.TimeseriesResource.Meta.throttle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1418,12 +1418,12 @@ resources don&#8217;t map directly (or at all) to Django models we can&#8217;t u
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesResource.base_fields">
-<tt class="descclassname">TimeseriesResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'end_time': &lt;tastypie.fields.IntegerField object at 0x110e43810&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x110e43750&gt;, 'agg': &lt;tastypie.fields.CharField object at 0x110e43890&gt;, 'data': &lt;tastypie.fields.ListField object at 0x110e43850&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x110e438d0&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x110e43b10&gt;}</em><a class="headerlink" href="#api.api.TimeseriesResource.base_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">TimeseriesResource.</tt><tt class="descname">base_fields</tt><em class="property"> = {'end_time': &lt;tastypie.fields.IntegerField object at 0x10d430f90&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x10d430ed0&gt;, 'agg': &lt;tastypie.fields.CharField object at 0x10d432050&gt;, 'data': &lt;tastypie.fields.ListField object at 0x10d430fd0&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x10d432090&gt;, 'resource_uri': &lt;tastypie.fields.CharField object at 0x10d4322d0&gt;}</em><a class="headerlink" href="#api.api.TimeseriesResource.base_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="api.api.TimeseriesResource.declared_fields">
-<tt class="descclassname">TimeseriesResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'agg': &lt;tastypie.fields.CharField object at 0x110e43890&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x110e43750&gt;, 'data': &lt;tastypie.fields.ListField object at 0x110e43850&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x110e438d0&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x110e43810&gt;}</em><a class="headerlink" href="#api.api.TimeseriesResource.declared_fields" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">TimeseriesResource.</tt><tt class="descname">declared_fields</tt><em class="property"> = {'agg': &lt;tastypie.fields.CharField object at 0x10d432050&gt;, 'begin_time': &lt;tastypie.fields.IntegerField object at 0x10d430ed0&gt;, 'data': &lt;tastypie.fields.ListField object at 0x10d430fd0&gt;, 'cf': &lt;tastypie.fields.CharField object at 0x10d432090&gt;, 'end_time': &lt;tastypie.fields.IntegerField object at 0x10d430f90&gt;}</em><a class="headerlink" href="#api.api.TimeseriesResource.declared_fields" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1578,7 +1578,7 @@ like test_persist.</p>
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api.client.html">client Package</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="api.client.html">REST API Client Libary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api.client.html#module-api.client.snmp"><tt class="docutils literal"><span class="pre">snmp</span></tt> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.client.html#module-api.client.timeseries"><tt class="docutils literal"><span class="pre">timeseries</span></tt> Module</a></li>
 </ul>

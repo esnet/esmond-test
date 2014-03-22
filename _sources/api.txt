@@ -1,5 +1,5 @@
-api Reference
-===========
+Developer Reference
+===================
 
 :mod:`api` Module
 -----------------

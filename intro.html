@@ -16,8 +16,8 @@ sbs: ['localtoc.html']
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/esnet.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -46,7 +46,7 @@ sbs: ['localtoc.html']
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar esnet-blue navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -57,7 +57,6 @@ sbs: ['localtoc.html']
         </button>
         <a class="navbar-brand" href="index.html"><img src="_static/logo-esnet-ball-sm.png">
           esmond</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.9.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -125,7 +124,7 @@ sbs: ['localtoc.html']
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">Introduction</a><ul>
 <li><a class="reference internal" href="#summary">Summary</a></li>
-<li><a class="reference internal" href="#desgin-goals">Desgin Goals</a></li>
+<li><a class="reference internal" href="#design-goals">Design Goals</a></li>
 </ul>
 </li>
 </ul>
@@ -151,10 +150,10 @@ description and interface type are stored in an SQL database. Storing this
 data in an SQL database allows us to use the full expressiveness of SQL to
 query this data. Since this data changes relatively infrequently the demands
 placed on the SQL server are fairly modest.  Our production server uses
-<a href="#id1"><span class="problematic" id="id2">PostgreSQL_</span></a>, but it&#8217;s likely that <a href="#id3"><span class="problematic" id="id4">SQLite_</span></a> would work just fine.</p>
+<a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a>, but it&#8217;s likely that <a class="reference external" href="https://sqlite.org/">SQLite</a> would work just fine.</p>
 </div>
-<div class="section" id="desgin-goals">
-<h2>Desgin Goals<a class="headerlink" href="#desgin-goals" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="design-goals">
+<h2>Design Goals<a class="headerlink" href="#design-goals" title="Permalink to this headline">¶</a></h2>
 <p>esmond was designed to meet the needs of the Network Engineering group at
 <a class="reference external" href="http://www.es.net/">ESnet</a>.  The key design goals were:</p>
 <ul class="simple">

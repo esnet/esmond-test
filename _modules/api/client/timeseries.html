@@ -16,8 +16,8 @@ sbs: None
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/esnet.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -45,7 +45,7 @@ sbs: None
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar esnet-blue navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -56,7 +56,6 @@ sbs: None
         </button>
         <a class="navbar-brand" href="../../../index.html"><img src="../../../_static/logo-esnet-ball-sm.png">
           esmond</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.9.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -78,9 +77,10 @@ sbs: None
 <li class="toctree-l1"><a class="reference internal" href="../../../config.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../deployment_cookbook.html">Deployment Cookbook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">esmond subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.client.html">REST API Client Libary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../hacking.html">Hacking on esmond</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api.html">api Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api.client.html">client Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../example/index.html">Examples</a></li>
 </ul>
 </ul>
 </li>
@@ -112,7 +112,8 @@ sbs: None
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+      <div class="col-md-1"></div>
+    <div class="col-md-9">
       
   <h1>Source code for api.client.timeseries</h1><div class="highlight"><pre>
 <span class="kn">import</span> <span class="nn">json</span>

@@ -16,8 +16,8 @@ sbs: None
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/esnet.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -45,7 +45,7 @@ sbs: None
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar esnet-blue navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -56,7 +56,6 @@ sbs: None
         </button>
         <a class="navbar-brand" href="#"><img src="_static/logo-esnet-ball-sm.png">
           esmond</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.9.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -78,9 +77,10 @@ sbs: None
 <li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deployment_cookbook.html">Deployment Cookbook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">esmond subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.client.html">REST API Client Libary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking on esmond</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">api Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.client.html">client Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example/index.html">Examples</a></li>
 </ul>
 </ul>
 </li>
@@ -116,7 +116,8 @@ sbs: None
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+      <div class="col-md-1"></div>
+    <div class="col-md-9">
       
   <div class="section" id="esmond-esnet-monitoring-daemon">
 <h1>esmond: ESnet Monitoring Daemon<a class="headerlink" href="#esmond-esnet-monitoring-daemon" title="Permalink to this headline">¶</a></h1>
@@ -135,13 +136,13 @@ description and interface type are stored in an SQL database. Storing this
 data in an SQL database allows us to use the full expressiveness of SQL to
 query this data. Since this data changes relatively infrequently the demands
 placed on the SQL server are fairly modest.  Our production server uses
-<a href="#id1"><span class="problematic" id="id2">PostgreSQL_</span></a>, but it&#8217;s likely that <a href="#id3"><span class="problematic" id="id4">SQLite_</span></a> would work just fine.</p>
+<a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a>, but it&#8217;s likely that <a class="reference external" href="https://sqlite.org/">SQLite</a> would work just fine.</p>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#summary">Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#desgin-goals">Desgin Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#design-goals">Design Goals</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
@@ -173,35 +174,44 @@ placed on the SQL server are fairly modest.  Our production server uses
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#newdb"><cite>newdb</cite></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="api.client.html">REST API Client Libary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.client.html#module-api.client.snmp"><tt class="docutils literal"><span class="pre">snmp</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.client.html#module-api.client.timeseries"><tt class="docutils literal"><span class="pre">timeseries</span></tt> Module</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking on esmond</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hacking.html#setting-up-a-development-environment">Setting up a development environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hacking.html#checking-coverage-of-the-tests">Checking coverage of the tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hacking.html#profiling-the-persister">Profiling the persister</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">api Reference</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api.html#module-api.api"><tt class="docutils literal"><span class="pre">api</span></tt> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#module-api.models"><tt class="docutils literal"><span class="pre">models</span></tt> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#module-api.views"><tt class="docutils literal"><span class="pre">views</span></tt> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#subpackages">Subpackages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api.client.html">client Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.client.html#module-api.client.snmp"><tt class="docutils literal"><span class="pre">snmp</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.client.html#module-api.client.timeseries"><tt class="docutils literal"><span class="pre">timeseries</span></tt> Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example/index.html#headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example/index.html#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example/index.html#admonitions">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example/index.html#footnotes">Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example/index.html#tables">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example/index.html#code-documentation">Code Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
-</div>
 <div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h3>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
 <li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
 <li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
 </ul>
+</div>
+</div>
 </div>
 
 

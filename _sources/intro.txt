@@ -22,8 +22,10 @@ placed on the SQL server are fairly modest.  Our production server uses
 PostgreSQL_, but it's likely that SQLite_ would work just fine.
 
 .. _TSDB: http://code.google.com/p/tsdb/
+.. _PostgreSQL: http://www.postgresql.org/
+.. _SQLite: https://sqlite.org/
 
-Desgin Goals
+Design Goals
 ============
 
 esmond was designed to meet the needs of the Network Engineering group at

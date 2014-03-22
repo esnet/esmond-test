@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
+*******************************
 esmond: ESnet Monitoring Daemon
-===============================
+*******************************
 
 Summary
 ~~~~~~~
@@ -26,6 +28,9 @@ placed on the SQL server are fairly modest.  Our production server uses
 PostgreSQL_, but it's likely that SQLite_ would work just fine.
 
 .. _TSDB: http://code.google.com/p/tsdb/
+.. _PostgreSQL: http://www.postgresql.org/
+.. _SQLite: https://sqlite.org/
+
 Contents:
 
 .. toctree::
@@ -38,9 +43,12 @@ Contents:
 
    architecture
 
+   api.client
+   
    hacking
    api
-   api.client
+
+   example/index
 
 Indices and tables
 ==================

@@ -16,8 +16,8 @@ sbs: ['localtoc.html']
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/esnet.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -46,7 +46,7 @@ sbs: ['localtoc.html']
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar esnet-blue navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -57,7 +57,6 @@ sbs: ['localtoc.html']
         </button>
         <a class="navbar-brand" href="index.html"><img src="_static/logo-esnet-ball-sm.png">
           esmond</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.9.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -154,6 +153,7 @@ sbs: ['localtoc.html']
       
   <div class="section" id="esmond-subsystems">
 <h1>esmond subsystems<a class="headerlink" href="#esmond-subsystems" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/arch.png" src="_images/arch.png" />
 <div class="section" id="espolld">
 <h2><cite>espolld</cite><a class="headerlink" href="#espolld" title="Permalink to this headline">¶</a></h2>
 <p><cite>espolld</cite> is the process which polls the devices, correlates the data (if
@@ -269,9 +269,13 @@ is merely retrieved based on the row key and time range.</p>
 that points at a row of data.  One does not &#8216;query&#8217; the row keys, rather
 it is something that can be constructed by the client querying the data.</p>
 <p>The row keys for the stored snmp data is of the following form:</p>
-<p><a class="reference external" href="snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012">snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012</a></p>
+<div class="highlight-python"><div class="highlight"><pre>snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012
+</pre></div>
+</div>
 <p>The components of the row key are:</p>
-<p>ns:device_name:oidset:oid:interface_name:data_frequency:year</p>
+<div class="highlight-python"><div class="highlight"><pre>ns:device_name:oidset:oid:interface_name:data_frequency:year
+</pre></div>
+</div>
 <p>The namespace component is a prefix to differentiate different kinds of
 data that might later be put into the backend - currently just &#8216;snmp.&#8217;
 The device name and interface names are self explanitory, the oidset is a
@@ -319,17 +323,15 @@ that someone has come up with a better way.</p>
 <div class="section" id="raw-data-cf">
 <h3>Raw Data cf<a class="headerlink" href="#raw-data-cf" title="Permalink to this headline">¶</a></h3>
 <p>The raw data are stored in a regular column family with the following schema:</p>
-<p>// regular col family
-&#8220;raw_data&#8221; : {</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>&#8220;<a class="reference external" href="snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012">snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012</a>&#8220; <span class="classifier-delimiter">:</span> <span class="classifier">{</span></dt>
-<dd>&#8220;1343955624&#8221; :   // long column name
-&#8220;16150333739148&#8221; // UTF-8 containing JSON for values.</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
+<div class="highlight-python"><div class="highlight"><pre>// regular col family
+&quot;raw_data&quot; : {
+    &quot;snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012&quot; : {
+        &quot;1343955624&quot; :   // long column name
+        &quot;16150333739148&quot; // UTF-8 containing JSON for values.
+    }
+}
+</pre></div>
+</div>
 <p>This is a regular column family - the column name is the timestamp and the
 value is the numeric value that came from the devices.  We were originaly
 storing the value as a numeric type, but it&#8217;s been changed to UTF-8 in case
@@ -339,22 +341,18 @@ on the column name - all of the columns are ordered on the timestamp.</p>
 </div>
 <div class="section" id="base-rate-cf">
 <h3>Base Rate cf<a class="headerlink" href="#base-rate-cf" title="Permalink to this headline">¶</a></h3>
-<p>// supercolumn
-&#8220;base_rates&#8221; : {</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>&#8220;<a class="reference external" href="snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012">snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012</a>&#8220; <span class="classifier-delimiter">:</span> <span class="classifier">{</span></dt>
-<dd><dl class="first docutils">
-<dt>&#8220;1343955600&#8221; <span class="classifier-delimiter">:</span> <span class="classifier">{     // long column name.</span></dt>
-<dd>&#8220;val&#8221;: &#8220;123&#8221;,    // string key, counter type value.
-&#8220;is_valid&#8221; : &#8220;2&#8221; // zero or positive non-zero.</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
+<p>The base rate data are store in a supercolumn family with the following schema:</p>
+<div class="highlight-python"><div class="highlight"><pre>// supercolumn
+&quot;base_rates&quot; : {
+    &quot;snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:30000:2012&quot; : {
+        &quot;1343955600&quot; : {     // long column name.
+            &quot;val&quot;: &quot;123&quot;,    // string key, counter type value.
+            &quot;is_valid&quot; : &quot;2&quot; // zero or positive non-zero.
+        }
+    }
+}
+</pre></div>
+</div>
 <p>The base rates are stored in a supercolumn.  Column name is the timestamp,
 and the values in the supercol are a string &#8216;key&#8217; and a counter type value.
 Counter types, and the name implies, is an i64 numeric data type that can be
@@ -372,22 +370,18 @@ a &#8220;zero value that is basically a NULL.&#8221;</p>
 </div>
 <div class="section" id="rate-aggregation-cf">
 <h3>Rate Aggregation cf<a class="headerlink" href="#rate-aggregation-cf" title="Permalink to this headline">¶</a></h3>
-<p>// supercolumn
-&#8220;rate_aggregations&#8221; : {</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>&#8220;<a class="reference external" href="snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:3600000:2012">snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:3600000:2012</a>&#8220; <span class="classifier-delimiter">:</span> <span class="classifier">{</span></dt>
-<dd><dl class="first docutils">
-<dt>&#8220;1343955600&#8221; <span class="classifier-delimiter">:</span> <span class="classifier">{   // long column name.</span></dt>
-<dd>&#8220;val&#8221;: &#8220;1234&#8221;, // string key, counter type.
-&#8220;30&#8221;: &#8220;38&#8221;     // key of the &#8216;non-val&#8217; column is freq of the base rate.</dd>
-</dl>
-<p class="last">}                  // the value of said is the count used in the average.</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
+<p>The rate aggregation data are stored in a supercolumn family with the following schema:</p>
+<div class="highlight-python"><div class="highlight"><pre>// supercolumn
+&quot;rate_aggregations&quot; : {
+    &quot;snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:3600000:2012&quot; : {
+        &quot;1343955600&quot; : {   // long column name.
+            &quot;val&quot;: &quot;1234&quot;, // string key, counter type.
+            &quot;30&quot;: &quot;38&quot;     // key of the &#39;non-val&#39; column is freq of the base rate.
+        }                  // the value of said is the count used in the average.
+    }
+}
+</pre></div>
+</div>
 <p>This is one of two column families that contain the higher level
 aggregations.  This one is how we generate the aggregated averages.  It
 has the same basic structure as the base rate cf - timestamp column name,
@@ -408,22 +402,18 @@ point to note how the data are stored.</p>
 </div>
 <div class="section" id="stat-aggregation-cf">
 <h3>Stat Aggregation cf<a class="headerlink" href="#stat-aggregation-cf" title="Permalink to this headline">¶</a></h3>
-<p>// supercolumn
-&#8220;stat_aggregations&#8221; : {</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>&#8220;<a class="reference external" href="snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:86400000:2012">snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:86400000:2012</a>&#8220; <span class="classifier-delimiter">:</span> <span class="classifier">{</span></dt>
-<dd><dl class="first docutils">
-<dt>&#8220;1343955600&#8221; <span class="classifier-delimiter">:</span> <span class="classifier">{ // long column name.</span></dt>
-<dd>&#8220;min&#8221;: &#8220;0&#8221;,  // string keys, long types.
-&#8220;max&#8221;: &#8220;484140&#8221;</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
+<p>The stat aggregation data are stored in a supercolumn family with the following schema:</p>
+<div class="highlight-python"><div class="highlight"><pre>// supercolumn
+&quot;stat_aggregations&quot; : {
+    &quot;snmp:router_a:FastPollHC:ifHCInOctets:xe-0_2_0:86400000:2012&quot; : {
+        &quot;1343955600&quot; : { // long column name.
+            &quot;min&quot;: &quot;0&quot;,  // string keys, long types.
+            &quot;max&quot;: &quot;484140&quot;
+        }
+    }
+}
+</pre></div>
+</div>
 <p>This is different and somewhat more straightforward.  As usual, timestamp
 column name and the super column elements are just string names and
 numeric values.  This just stores the min/max rates over the given period.
