@@ -1,17 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Configuration &mdash; esmond</title>
+    <title>Configuration &mdash; esmond 0.9.1a1 documentation</title>
     
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="_static/esnet/esnet.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -25,154 +23,32 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="esmond" href="index.html" />
+    <link rel="top" title="esmond 0.9.1a1 documentation" href="index.html" />
     <link rel="next" title="Deployment Cookbook" href="deployment_cookbook.html" />
-    <link rel="prev" title="Installation" href="install.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-
+    <link rel="prev" title="Installation" href="install.html" /> 
   </head>
   <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="deployment_cookbook.html" title="Deployment Cookbook"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">esmond 0.9.1a1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">
-          <!-- LOGO: logo-esnet-ball-sm.png _static/logo-esnet-ball-sm.png --><img src="_static/logo-esnet-ball-sm.png">
-          esmond</a>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
             
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="index.html">Section <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deployment_cookbook.html">Deployment Cookbook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">esmond subsystems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.client.html">REST API Client Libary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking on esmond</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Reference</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="install.html" title="Previous Chapter: Installation">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="hidden-sm">
-        Installation
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="deployment_cookbook.html" title="Next Chapter: Deployment Cookbook">
-      <span class="hidden-sm">
-        Deployment Cookb...
-      </span>
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </li>
-              
-            
-            <li class="divider-vertical"></li>
-            
-                <li><a href="genindex.html">Index</a></li>
-                <li><a href="https://www.es.net">ESnet</a></li>
-            
-            
-            
-            
-          </ul>
-          
-            
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
-        </div>
-    </div>
-  </div>
-
-<div class="container">
-  <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Configuration</a><ul>
-<li><a class="reference internal" href="#environment-variables">Environment Variables</a><ul>
-<li><a class="reference internal" href="#esmond-root"><tt class="docutils literal"><span class="pre">ESMOND_ROOT</span></tt></a></li>
-<li><a class="reference internal" href="#esmond-conf"><tt class="docutils literal"><span class="pre">ESMOND_CONF</span></tt></a></li>
-<li><a class="reference internal" href="#esmond-testing"><tt class="docutils literal"><span class="pre">ESMOND_TESTING</span></tt></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#config-file">Config File</a><ul>
-<li><a class="reference internal" href="#sql-db">sql_db_*</a></li>
-<li><a class="reference internal" href="#cassandra">cassandra_*</a></li>
-<li><a class="reference internal" href="#api-anon-limit">api_anon_limit</a></li>
-<li><a class="reference internal" href="#espoll-persist-uri">espoll_persist_uri</a></li>
-<li><a class="reference internal" href="#htpasswd-file">htpasswd_file</a></li>
-<li><a class="reference internal" href="#mib-dirs">mib_dirs</a></li>
-<li><a class="reference internal" href="#mibs">mibs</a></li>
-<li><a class="reference internal" href="#pid-dir">pid_dir</a></li>
-<li><a class="reference internal" href="#syslog-facility">syslog_facility</a></li>
-<li><a class="reference internal" href="#syslog-priority">syslog_priority</a></li>
-<li><a class="reference internal" href="#traceback-dir">traceback_dir</a></li>
-<li><a class="reference internal" href="#tsdb-chunk-prefixes">tsdb_chunk_prefixes</a></li>
-<li><a class="reference internal" href="#tsdb-root">tsdb_root</a></li>
-<li><a class="reference internal" href="#persist-map-and-persist-queues">persist_map and persist_queues</a><ul>
-<li><a class="reference internal" href="#creating-the-sql-database">Creating the SQL Database</a></li>
-<li><a class="reference internal" href="#configuring-collection">Configuring Collection</a><ul>
-<li><a class="reference internal" href="#testing-polling">Testing Polling</a></li>
-<li><a class="reference internal" href="#start-data-collection">Start Data Collection</a></li>
-<li><a class="reference internal" href="#performance-tuning">Performance Tuning</a></li>
-<li><a class="reference internal" href="#setting-up-esdbd-standalone">Setting up <cite>esdbd</cite> standalone</a></li>
-<li><a class="reference internal" href="#setting-up-esdbd-with-mod-wsgi">Setting up <cite>esdbd</cite> with mod_wsgi</a></li>
-<li><a class="reference internal" href="#graphite-integration">Graphite Integration</a></li>
-<li><a class="reference internal" href="#care-and-feeding">Care and Feeding</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-    <div class="col-md-9">
-      
   <div class="section" id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="environment-variables">
@@ -411,28 +287,100 @@ util.</p>
 </div>
 
 
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration</a><ul>
+<li><a class="reference internal" href="#environment-variables">Environment Variables</a><ul>
+<li><a class="reference internal" href="#esmond-root"><tt class="docutils literal"><span class="pre">ESMOND_ROOT</span></tt></a></li>
+<li><a class="reference internal" href="#esmond-conf"><tt class="docutils literal"><span class="pre">ESMOND_CONF</span></tt></a></li>
+<li><a class="reference internal" href="#esmond-testing"><tt class="docutils literal"><span class="pre">ESMOND_TESTING</span></tt></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#config-file">Config File</a><ul>
+<li><a class="reference internal" href="#sql-db">sql_db_*</a></li>
+<li><a class="reference internal" href="#cassandra">cassandra_*</a></li>
+<li><a class="reference internal" href="#api-anon-limit">api_anon_limit</a></li>
+<li><a class="reference internal" href="#espoll-persist-uri">espoll_persist_uri</a></li>
+<li><a class="reference internal" href="#htpasswd-file">htpasswd_file</a></li>
+<li><a class="reference internal" href="#mib-dirs">mib_dirs</a></li>
+<li><a class="reference internal" href="#mibs">mibs</a></li>
+<li><a class="reference internal" href="#pid-dir">pid_dir</a></li>
+<li><a class="reference internal" href="#syslog-facility">syslog_facility</a></li>
+<li><a class="reference internal" href="#syslog-priority">syslog_priority</a></li>
+<li><a class="reference internal" href="#traceback-dir">traceback_dir</a></li>
+<li><a class="reference internal" href="#tsdb-chunk-prefixes">tsdb_chunk_prefixes</a></li>
+<li><a class="reference internal" href="#tsdb-root">tsdb_root</a></li>
+<li><a class="reference internal" href="#persist-map-and-persist-queues">persist_map and persist_queues</a><ul>
+<li><a class="reference internal" href="#creating-the-sql-database">Creating the SQL Database</a></li>
+<li><a class="reference internal" href="#configuring-collection">Configuring Collection</a><ul>
+<li><a class="reference internal" href="#testing-polling">Testing Polling</a></li>
+<li><a class="reference internal" href="#start-data-collection">Start Data Collection</a></li>
+<li><a class="reference internal" href="#performance-tuning">Performance Tuning</a></li>
+<li><a class="reference internal" href="#setting-up-esdbd-standalone">Setting up <cite>esdbd</cite> standalone</a></li>
+<li><a class="reference internal" href="#setting-up-esdbd-with-mod-wsgi">Setting up <cite>esdbd</cite> with mod_wsgi</a></li>
+<li><a class="reference internal" href="#graphite-integration">Graphite Integration</a></li>
+<li><a class="reference internal" href="#care-and-feeding">Care and Feeding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Installation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="deployment_cookbook.html"
+                        title="next chapter">Deployment Cookbook</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/config.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-        <br/>
-        
-<div id="sourcelink">
-  <a href="_sources/config.txt"
-     rel="nofollow">Source</a>
-</div>
-      
-    </p>
-    <p>
-        &copy; Copyright 2012-2013, The Regents of the University of California.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
-    </p>
-  </div>
-</footer>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="deployment_cookbook.html" title="Deployment Cookbook"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li><a href="index.html">esmond 0.9.1a1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-2013, The Regents of the University of California.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
   </body>
 </html>
