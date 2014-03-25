@@ -58,6 +58,9 @@ theme we need to make some changes. Make the following changes to conf.py::
    html_logo = "_esnet/static/logo-esnet-ball-sm.png"
    html_sidebars = {'index': None, 'search': None, '*': ['localtoc.html']}
    html_favicon = "_esnet/static/favicon.ico"
+   html_context = {
+      "github_url": "https://github.com/esnet/PROJNAME",
+   }
 
 That's it!
 

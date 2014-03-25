@@ -88,7 +88,7 @@
                 <li><a href="../genindex.html">Index</a></li>
                 <li><a href="https://www.es.net">ESnet</a></li>
             
-            <li><a href="http://github.com/esnet/esmond-test"><img src="_static/esnet/icon-github.png" height="20" width="20"></a></li>
+            <li><a href="http://github.com/esnet/esmond-test/"><img src="_static/esnet/icon-github.png" height="20" width="20"></a></li>
             
             
             
@@ -166,6 +166,9 @@ theme we need to make some changes. Make the following changes to conf.py:</p>
 <span class="n">html_logo</span> <span class="o">=</span> <span class="s">&quot;_esnet/static/logo-esnet-ball-sm.png&quot;</span>
 <span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;index&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;search&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;*&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;localtoc.html&#39;</span><span class="p">]}</span>
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s">&quot;_esnet/static/favicon.ico&quot;</span>
+<span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s">&quot;github_url&quot;</span><span class="p">:</span> <span class="s">&quot;https://github.com/esnet/PROJNAME&quot;</span><span class="p">,</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>That&#8217;s it!</p>
@@ -200,21 +203,28 @@ theme we need to make some changes. Make the following changes to conf.py:</p>
 </div>
 <footer class="footer">
   <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
+    <div class="row">
+      <div class="col-md-1">
+        <a href="http://www.es.net/"><img src="_static/esnet/logo-esnet.png" alt="[ESnet]"></a>
+      </div>
+      <div class="col-md-11">
+        <p class="pull-right">
+        <a href="#">Back to top</a>
+        
         <br/>
         
 <div id="sourcelink">
   <a href="../_sources/_esnet/README.txt"
      rel="nofollow">Source</a>
 </div>
-      
-    </p>
-    <p>
-        &copy; Copyright 2012-2013, The Regents of the University of California.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
-    </p>
+        
+        </p>
+        <p>
+            &copy; Copyright 2012-2013, The Regents of the University of California.<br/>
+          Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+        </p>
+      </div>
+    </div>
   </div>
 </footer>
   </body>
