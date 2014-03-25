@@ -14,13 +14,48 @@ Getting Started
 
 1. Install Sphinx and sphinx-bootstrap-theme. See the instructions below for
    installing these either using the Mac OS X base system python or MacPorts.
-2. cd $PROJECT_ROOT
-3. mkdir docs
-4. git subtree add --prefix docs/_esnet \
-   https://github.com/esnet/esnet-gh-pages-base.git master --squash
-5. cd docs
-6. sphinx-quickstart
-7. edit in changes from _esnet/conf.py
+2. ``cd $PROJECT_ROOT``
+3. ``mkdir docs``
+4. ``git subtree add --prefix docs/_esnet https://github.com/esnet/esnet-gh-pages-base.git master --squash``
+5. ``cd docs``
+6. ``sphinx-quickstart``
+7. ``ln -s ../_esnet/static _static/esnet``
+8. edit ``conf.py`` as described in the next section
+  
+Editing conf.py
+~~~~~~~~~~~~~~~
+
+``sphinx-quickstart`` creates a basic conf.py file, however to use the ESnet
+theme we need to make some changes. Make the following changes to conf.py::
+
+   # add this with the imports at the top of the file
+   import sphinx_bootstrap_theme
+
+   # change templates_path to this
+   templates_path = ['_esnet/templates']
+
+   # change html_theme and html_theme_path:
+   html_theme = 'bootstrap'
+   html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+   # add html_theme options:
+   html_theme_options = {
+          "navbar_pagenav": False,
+          "nosidebar": False,
+          "navbar_class": "navbar",
+          "navbar_site_name": "Section",
+          "source_link_position": "footer",
+       "navbar_links": [
+           ("Index", "genindex"),
+           ("ESnet", "https://www.es.net", True),
+       ],
+   }
+
+   # add html_logo and html_sidebars
+   html_logo = "_esnet/static/logo-esnet-ball-sm.png"
+   html_sidebars = {'index': None, 'search': None, '*': ['localtoc.html']}
+
+That's it!
 
 Sphinx Installation using Mac OS X Base Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,3 +74,4 @@ Sphinx Installation using MacPorts
 
 Publishing
 ~~~~~~~~~~
+From the ``docs`` directory run ``_esnet/deploy.sh``.
