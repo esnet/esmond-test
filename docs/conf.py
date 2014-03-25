@@ -97,11 +97,11 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # add html_theme options:
 html_theme_options = {
-       "navbar_pagenav": False,
-       "nosidebar": False,
-       "navbar_class": "navbar",
-       "navbar_site_name": "Section",
-       "source_link_position": "footer",
+    "navbar_pagenav": False,
+    "nosidebar": False,
+    "navbar_class": "navbar",
+    "navbar_site_name": "Section",
+    "source_link_position": "footer",
     "navbar_links": [
         ("Index", "genindex"),
         ("ESnet", "https://www.es.net", True),
@@ -112,6 +112,9 @@ html_theme_options = {
 html_logo = "_esnet/static/logo-esnet-ball-sm.png"
 html_sidebars = {'index': None, 'search': None, '*': ['localtoc.html']}
 html_favicon = "_esnet/static/favicon.ico"
+html_context = {
+    "github_url": "http://github.com/esnet/esmond-test/",
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
