@@ -88,6 +88,7 @@
                 <li><a href="../genindex.html">Index</a></li>
                 <li><a href="https://www.es.net">ESnet</a></li>
             
+            <li><a href="http://github.com/esnet/esmond-test"><img src="_static/esnet/icon-github.png" height="20" width="20"></a></li>
             
             
             
@@ -122,13 +123,52 @@ provides the overrides and customizations to the base theme.</p>
 <ol class="arabic simple">
 <li>Install Sphinx and sphinx-bootstrap-theme. See the instructions below for
 installing these either using the Mac OS X base system python or MacPorts.</li>
-<li>cd $PROJECT_ROOT</li>
-<li>mkdir docs</li>
-<li>git subtree add &#8211;prefix docs/_esnet <a class="reference external" href="https://github.com/esnet/esnet-gh-pages-base.git">https://github.com/esnet/esnet-gh-pages-base.git</a> master &#8211;squash</li>
-<li>cd docs</li>
-<li>sphinx-quickstart</li>
-<li>edit in changes from _esnet/conf.py</li>
+<li><tt class="docutils literal"><span class="pre">cd</span> <span class="pre">$PROJECT_ROOT</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">mkdir</span> <span class="pre">docs</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">git</span> <span class="pre">subtree</span> <span class="pre">add</span> <span class="pre">--prefix</span> <span class="pre">docs/_esnet</span> <span class="pre">https://github.com/esnet/esnet-gh-pages-base.git</span> <span class="pre">master</span> <span class="pre">--squash</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">cd</span> <span class="pre">docs</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">sphinx-quickstart</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">../_esnet/static</span> <span class="pre">_static/esnet</span></tt></li>
+<li>edit <tt class="docutils literal"><span class="pre">conf.py</span></tt> as described in the next section</li>
 </ol>
+</div>
+<div class="section" id="editing-conf-py">
+<h2>Editing conf.py<a class="headerlink" href="#editing-conf-py" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">sphinx-quickstart</span></tt> creates a basic conf.py file, however to use the ESnet
+theme we need to make some changes. Make the following changes to conf.py:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># add this with the imports at the top of the file</span>
+<span class="kn">import</span> <span class="nn">sphinx_bootstrap_theme</span>
+
+<span class="c"># change templates_path to this</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;_esnet/templates&#39;</span><span class="p">]</span>
+
+<span class="c"># add _esnet to exclude_patterns</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;_build&#39;</span><span class="p">,</span> <span class="s">&#39;_esnet&#39;</span><span class="p">]</span>
+
+<span class="c"># change html_theme and html_theme_path:</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;bootstrap&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="n">sphinx_bootstrap_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()</span>
+
+<span class="c"># add html_theme options:</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+       <span class="s">&quot;navbar_pagenav&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+       <span class="s">&quot;nosidebar&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+       <span class="s">&quot;navbar_class&quot;</span><span class="p">:</span> <span class="s">&quot;navbar&quot;</span><span class="p">,</span>
+       <span class="s">&quot;navbar_site_name&quot;</span><span class="p">:</span> <span class="s">&quot;Section&quot;</span><span class="p">,</span>
+       <span class="s">&quot;source_link_position&quot;</span><span class="p">:</span> <span class="s">&quot;footer&quot;</span><span class="p">,</span>
+    <span class="s">&quot;navbar_links&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s">&quot;Index&quot;</span><span class="p">,</span> <span class="s">&quot;genindex&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s">&quot;ESnet&quot;</span><span class="p">,</span> <span class="s">&quot;https://www.es.net&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+
+<span class="c"># add html_logo and html_sidebars</span>
+<span class="n">html_logo</span> <span class="o">=</span> <span class="s">&quot;_esnet/static/logo-esnet-ball-sm.png&quot;</span>
+<span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;index&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;search&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;*&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;localtoc.html&#39;</span><span class="p">]}</span>
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s">&quot;_esnet/static/favicon.ico&quot;</span>
+</pre></div>
+</div>
+<p>That&#8217;s it!</p>
 </div>
 <div class="section" id="sphinx-installation-using-mac-os-x-base-python">
 <h2>Sphinx Installation using Mac OS X Base Python<a class="headerlink" href="#sphinx-installation-using-mac-os-x-base-python" title="Permalink to this headline">¶</a></h2>
@@ -149,6 +189,7 @@ installing these either using the Mac OS X base system python or MacPorts.</li>
 </div>
 <div class="section" id="publishing">
 <h2>Publishing<a class="headerlink" href="#publishing" title="Permalink to this headline">¶</a></h2>
+<p>From the <tt class="docutils literal"><span class="pre">docs</span></tt> directory run <tt class="docutils literal"><span class="pre">_esnet/deploy.sh</span></tt>.</p>
 </div>
 </div>
 
