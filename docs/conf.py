@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+import sphinx_bootstrap_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -28,7 +29,7 @@ sys.path.insert(0, os.path.abspath('../esmond'))
 extensions = ['sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinx.ext.todo', 'sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_esnet/templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -91,7 +92,26 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+# add html_theme options:
+html_theme_options = {
+       "navbar_pagenav": False,
+       "nosidebar": False,
+       "navbar_class": "navbar",
+       "navbar_site_name": "Section",
+       "source_link_position": "footer",
+    "navbar_links": [
+        ("Index", "genindex"),
+        ("ESnet", "https://www.es.net", True),
+    ],
+}
+
+# add html_logo and html_sidebars
+html_logo = "_esnet/static/logo-esnet-ball-sm.png"
+html_sidebars = {'index': None, 'search': None, '*': ['localtoc.html']}
+html_favicon = "_esnet/static/favicon.ico"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
