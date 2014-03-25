@@ -78,4 +78,5 @@ Sphinx Installation using MacPorts
 
 Publishing
 ~~~~~~~~~~
+
 From the ``docs`` directory run ``_esnet/deploy.sh``.
