@@ -34,6 +34,9 @@ theme we need to make some changes. Make the following changes to conf.py::
    # change templates_path to this
    templates_path = ['_esnet/templates']
 
+   # add _esnet to exclude_patterns
+   exclude_patterns = ['_build', '_esnet']
+
    # change html_theme and html_theme_path:
    html_theme = 'bootstrap'
    html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
@@ -54,6 +57,7 @@ theme we need to make some changes. Make the following changes to conf.py::
    # add html_logo and html_sidebars
    html_logo = "_esnet/static/logo-esnet-ball-sm.png"
    html_sidebars = {'index': None, 'search': None, '*': ['localtoc.html']}
+   html_favicon = "_esnet/static/favicon.ico"
 
 That's it!
 
